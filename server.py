@@ -16,7 +16,7 @@ def hello():
 
 class Employees(Resource):
     def get(self):
-        return {'employees': [{'id':1, 'name':'Balram'},{'id':2, 'name':'Tom'}]} 
+        return {'employees': [{'id':1, 'name':'Balram'},{'id':2, 'name':'Tom'}]}
 
 class Employees_Name(Resource):
     def get(self, employee_id):
