@@ -16,8 +16,8 @@ export class PatientComponent implements OnInit {
     ngOnInit() {
     }
 
-    getTest() {
-        this.httpClient.get('http://127.0.0.1:5002/Test').subscribe(data => {
+    getPatients() {
+        this.httpClient.get('http://127.0.0.1:5002/patients').subscribe(data => {
             this.test = data;
             console.log(this.test);
         });

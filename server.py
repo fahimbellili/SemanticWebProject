@@ -36,10 +36,24 @@ class Test(Resource):
     results = sparql.query().convert()
     return results
 
+class getPatients(Resource):
+    def get(self):
+        sparql = SPARQLWrapper("http://localhost:8080/sparql")
+        sparql.setQuery("""
+            prefix h: <http://www.webofdata.fr/vocabulary#>
+            select * 
+            where {?x a h:Homme}
+            }
+        """)
+        sparql.setReturnFormat(JSON)
+        results = sparql.query().convert()
+        return results
+        
 
 api.add_resource(Employees, '/employees') # Route_1
 api.add_resource(Employees_Name, '/employees/<employee_id>') # Route_3
 api.add_resource(Test, '/Test') # route_4
+api.add_resource(getPatients, '/patients')
 
 
 

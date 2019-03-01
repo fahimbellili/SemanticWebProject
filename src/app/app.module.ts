@@ -9,6 +9,7 @@ import {MaladieComponent} from './maladie/maladie.component';
 import {MedicamentComponent} from './medicament/medicament.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {RouterModule, Routes} from '@angular/router';
+import { DiagnosticComponent } from './diagnostic/diagnostic.component';
 
 const appRoutes: Routes = [
     {path: '', component: PatientComponent},
@@ -16,6 +17,7 @@ const appRoutes: Routes = [
     {path: 'symptomes', component: SymptomeComponent},
     {path: 'maladies', component: MaladieComponent},
     {path: 'medicaments', component: MedicamentComponent},
+    {path: 'diagnostic', component: DiagnosticComponent}
 ];
 
 @NgModule({
@@ -25,7 +27,8 @@ const appRoutes: Routes = [
         SymptomeComponent,
         MaladieComponent,
         MedicamentComponent,
-        NavbarComponent
+        NavbarComponent,
+        DiagnosticComponent
     ],
     imports: [
         BrowserModule,
