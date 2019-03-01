@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <button type="button" class="btn btn-success" (click)="getTest()">Afficher la liste des Patients</button>
+        </div>
+        <div class="col-sm-8">
+            <div>
+                <ul>
+                    <li *ngFor="let tst of test?.results.bindings">
+                        {{tst.label.value}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

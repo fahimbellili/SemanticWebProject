@@ -39,12 +39,6 @@ export class AppComponent {
         });
     }
 
-    getTest() {
-        this.httpClient.get('http://127.0.0.1:5002/Test').subscribe(data => {
-            this.test = data;
-            console.log(this.test);
-        });
-    }
 
     onPatient() {
 
