@@ -13,6 +13,8 @@ export class AppComponent {
     employeeData: JSON;
     employee: JSON;
 
+    test: any;
+
     constructor(private httpClient: HttpClient) {
     }
 
@@ -34,6 +36,13 @@ export class AppComponent {
         this.httpClient.get('http://127.0.0.1:5002/employees/1').subscribe(data => {
             this.employee = data as JSON;
             console.log(this.employee);
+        });
+    }
+
+    getTest() {
+        this.httpClient.get('http://127.0.0.1:5002/Test').subscribe(data => {
+            this.test = data;
+            console.log(this.test);
         });
     }
 

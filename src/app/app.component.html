@@ -4,7 +4,15 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3">
-            <button type="button" class="btn btn-success" (click)="onPatient()">Liste des Patients</button>
+            <button type="button" class="btn btn-success" (click)="getTest()">Liste des Patients</button>
+            <br>
+            <div>
+                <ul>
+                    <li *ngFor="let tst of test?.results.bindings">
+                        {{tst.label.value}}
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="col-sm-3">
             <button type="button" class="btn btn-success" (click)="onSympt()">Liste des symptômes</button>
